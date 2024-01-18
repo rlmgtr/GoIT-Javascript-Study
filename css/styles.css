@@ -2,9 +2,20 @@
 
 
 .practice-list {
-    
+ list-style: none;
+ display: flex;
+ padding: 20px;
+ border: 20px;
+ border-color: blue;
+ margin:4px;
 }
 
 .practice-item {
  font:tahoma;
+ padding: 25px;
+ border: 2px;
+ border-style: dashed;
+ border-color: black;
+ margin:25px;
+ 
 }

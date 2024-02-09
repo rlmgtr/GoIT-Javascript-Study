@@ -3,7 +3,7 @@
 
 .practice-list {
  list-style: none;
- display: flex;
+ display: ;
  padding: 20px;
  border: 20px;
  border-color: blue;
@@ -18,4 +18,10 @@
  border-color: black;
  margin:25px;
  
+}
+
+
+.samplediv {
+
+    position: static;
 }

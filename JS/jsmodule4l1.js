@@ -15,11 +15,30 @@ registerMember("Poly", greet); // allows a function to be a parameter.
 
 
 
-// INLINE CALL BACK
+// INLINE CALL BACK ------------- 
 
-// SEVERAL CALLBACK
 
-// REPETITION ABSTRACTION
+
+// SEVERAL CALLBACK -----------------
+// Math.random() - genrates a random number from 0.1 to 0.99 
+// if else is not necessary
+
+
+// REPETITION ABSTRACTION -------------
+// from the word itself, a function  taht repeats a procedure given that it has condition on when to stop / until when
+
+
+ function repeatPost(num) {if (n <= 0 ) return console.log("Supply value, at least 1"); for (let i = 0; i <= 5; i++) {
+    console.log(i);
+ }
+}
+
+repeatPost(2);
+repeatPost(3);
+repeatPost(4);
+
+
+
 
 // FOREACH METHOD
 

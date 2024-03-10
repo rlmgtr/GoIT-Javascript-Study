@@ -142,12 +142,17 @@ for (let veg of veggies ) {
 for (let veg of veggies) {
 total += veg;
 }
+console.log(total);
 
-// continue at 2:05
+// object.entries - shows the property entries to appear
 
+const vegEntries = Object.entries(vegetables); // write a new const and apply the Object.entries to the desired object
+console.log(vegEntries); // call the new const
+
+// results will return as array
  
 
 
 
 
-console.log(total);
+

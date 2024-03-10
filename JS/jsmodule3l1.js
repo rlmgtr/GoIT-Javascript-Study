@@ -173,11 +173,36 @@ const books = [
 
 // Way on how to access data from array of objects
 
-//1.
-console.log(books[1].title);
- 
+// console.log(arrayname[itemindexposition].keyname);
+console.log(books[1].title); // Beside Still Waters
+console.log(books[0]); // all object details
+
+// use for of to get all same specific keys: 
+let titles = [];
+for (let book of books) {titles.push(book.title);
+}
+console.log(titles);
 
 
+ // Remember: Object starts with = {}, and array is []
+ // in array of objects, you are most likely will use for of loop - study this further. 
+
+ // study how to do vice versa, arrays inside objects. 
 
 
+ // object literal - as simple as creating an object: 
 
+ const personOne = {
+    name: "Juan Dela Cruz",
+    age: 30,
+    address: "bataan",
+ };
+
+// using the new object
+
+const personTwo =  new Object();
+console.log(personTwo); // shows empty until you will add keys and values
+personTwo.name = "Jose Santos";
+personTwo.age= 25;
+console.log(personTwo);
+ // Review 2:37

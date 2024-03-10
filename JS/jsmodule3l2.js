@@ -29,7 +29,7 @@ sayGreetings("Mr", "Andress", "Bulacan", "Mayor", "twoterms");
 
 // REMEMBER - Parameters and arguments should have the same order. Example: if if parameter says (age, address), argument should say (30, Bataan)
 
-// Array destructuring - calling the item inside the ...rest. Create variables according to the number of items inside the ...rest. (apply basic logic to determine the variable names. )
+// Array destructuring - calling the item inside the ...rest. Create variables according to the number of items inside the ...rest. (apply basic logic to make sense with the variable names. )
 
 
 // Object destructuring //
@@ -49,6 +49,7 @@ details: {
 console.log()
 
 let {make, type} = truck; // this syntax allows you to just simply enter the key to get the value instead of (sample) truck.make syntax
+let {use, color, details: {category} } = truck; // this is the syntax if there is an object iside the object
 console.log(make);
 console.log(type);
 
@@ -59,5 +60,14 @@ type = "twelve wheeler"; // it will not change the type inside the object. but t
 console.log(truck); 
 
 console.log(type);
+
+// PARAMETER OBJECT PATTERN - review further, but the idea is making a list with five countable entries as one - an object
+
+
+
+
+
+
+
 
 

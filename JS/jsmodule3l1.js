@@ -150,6 +150,31 @@ const vegEntries = Object.entries(vegetables); // write a new const and apply th
 console.log(vegEntries); // call the new const
 
 // results will return as array
+
+// Array of Objects - an array consist of objects. See below: 
+
+const books = [
+    {
+      title: "The Last Kingdom",
+      author: "Bernard Cornwell",
+      rating: 8.38,
+    },
+    {
+      title: "Beside Still Waters",
+      author: "Robert Sheckley",
+      rating: 8.51,
+    },
+    {
+      title: "The Dream of a Ridiculous Man",
+      author: "Fyodor Dostoevsky",
+      rating: 7.75,
+    },
+  ];
+
+// Way on how to access data from array of objects
+
+//1.
+console.log(books[1].title);
  
 
 

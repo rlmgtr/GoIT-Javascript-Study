@@ -41,9 +41,11 @@ function processCall (receipient, onAvailable, onNotAvailable) {
 const isRecipientAvailable = Math.random() > 0.5; // Math.random generates a number from 0.1 to 0.99
 
 if (!isRecipientAvailable) {
-   onNotAvailable() 
-}
+   onNotAvailable();
+   return;
+} else {
 onAvailable();
+}
 }
 
 function takeCall (name) {
@@ -62,7 +64,7 @@ processCall("Poly", takeCall, ActivateAnsweringMachine);
 
 
 // Math.random() - genrates a random number from 0.1 to 0.99 
-// if else is not necessary
+// if else is not necessary, but return can be added. 
 
 
 // REPETITION ABSTRACTION -------------
@@ -74,15 +76,47 @@ processCall("Poly", takeCall, ActivateAnsweringMachine);
  }
 }
 
-repeatPost(2);
-repeatPost(3);
-repeatPost(4);
-
-
-
+//repeatPost(2);
+//repeatPost(3);
+//repeatPost(4);
 
 // FOREACH METHOD
 
+const numeros = [5, 10, 15, 20, 25, 30]; 
+
+for (let num of numeros) {
+   console.log(num);
+};
+
+// review the syntax, the first parameter, displays each item, second is the index number and third will display the array
+
+numeros.forEach(function (numba, i, ab) { 
+   console.log(numba, i, ab);
+});
+
 // ARROW FUNCTIONS
 
-// CODE TYPES
+let sayhi = function() {
+   console.log("hello world")
+};
+
+sayhi();
+
+
+// arrow function works the same way, but applicable to not use the return keyword especially for one liner code. 
+// in cases that there is only one parameter, it is not necessary to put it inside the parenthesis., but without a parameter, you need an empty parenthesis. With two or more parenthesis, you need to put it inside the parenthesis. 
+let = sayhello = () => {
+   console.log("hello earth")
+};  
+sayhello();
+
+ 
+
+// CODE TYPES---------------------
+
+
+// imperative programming: creates a code together with the function and run it. 
+
+// declarative programming: creates a code with keyword to sustain its function. 
+
+// Review at 1:52

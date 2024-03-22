@@ -30,5 +30,33 @@ console.log(headersC);
 
 // html is a LIVE collection while node is STATIC
 
+let addVeg = document.getElementById('addVeg');
+let vegs = document.getElementById('vegs');
+let allvegs =document.querySelectorAll('veg');
+
+addVeg.onclick = function() {
+let li = document.createElement("li");
+li.innerText = "eggplant";
+li.className = "veg";
+vegs.appendChild(li);
+console.log(vegs);
+};
+
+// comparison between getElementsByClassname is good if you are going to target and add further functions in your target elemets; while querySelectorAll is good for just targeting an element. 
+
+let progs = ["JS", "Phyton", "react"];
+let ul = document.createElement("ul");
+let progcon = document.getElementById("progcon");
+
+for ( let prog of progs) {
+    let li = document.createElement("li");
+    li.innerText = prog;
+    ul.appendChild(li);
+}
+
+progcon.append(ul);
+
+
+
 
 

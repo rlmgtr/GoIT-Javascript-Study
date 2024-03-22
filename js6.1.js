@@ -6,15 +6,15 @@ let heading = document.getElementById("heading");
 heading.style.color = "blue";
 // ID is for single elements
 
-//let headers = document.getElementsByClassName('header');
+/* let headers = document.getElementsByClassName('header');
 // console.log(headers); will give you an array
 headers[0].style.color = "red";
 headers[1].style.color = "red";
-headers[2].style.color = "red";
+headers[2].style.color = "red"; 
 
 for (let i = 0; i = headers.length; i++){
     headers[i].style.color = "red";
-}
+} */
 
 // above can use for and for of
 
@@ -22,8 +22,11 @@ for (let i = 0; i = headers.length; i++){
 
 // querySelector can only target one even there are many classes:
 
-let headingID = document.querySelector('#heading') // for ID - gives nodelist
-let headersQ = document.querySelectorAll('.header') // for class gives html collection
+let headingID = document.querySelector('#heading') 
+let headersQ = document.querySelectorAll('.header') // for ID - gives nodelist
+let headersC = document.getElementsByClassName('header'); // class for class gives html collection
+console.log(headersQ);
+console.log(headersC);
 
 // html is a LIVE collection while node is STATIC
 

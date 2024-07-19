@@ -12,3 +12,5 @@ testPromise.then((message) => {
     console.log('this is then ' + message)
 }).catch((message)=>{console.log('this is catch ' + message)})
 
+
+// test for grade input

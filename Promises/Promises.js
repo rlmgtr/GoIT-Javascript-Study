@@ -21,3 +21,5 @@ console.log(testPromise);
 // 1. Pending
 // 2. Fulfilled
 // 3. Rejected
+
+// continue at 42:00

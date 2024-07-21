@@ -1,16 +1,20 @@
-const testPromise = new Promise ((passed, failed) => {
-const grade = 75
-let score = 70
-
-if ( grade <= score) {passed('You passed this semester')
-} else {
-    failed('You failed this semster')
-}
-})
-
-testPromise.then((message) => {
-    console.log('this is then ' + message)
-}).catch((message)=>{console.log('this is catch ' + message)})
 
 
-// test for grade input
+document.getElementById('btnid').addEventListener('click', () => {
+    const grade = 75;
+    const score = parseInt(document.getElementById('scoreid').value);
+
+    const testPromise = new Promise((passed, failed) => {
+        if (score >= grade) {
+            passed('You passed this semester');
+        } else {
+            failed('You failed this semester');
+        }
+    });
+
+    testPromise.then((message) => {
+        document.getElementById('resultid').textContent = 'Your result is: ' + message;
+    }).catch((message) => {
+        document.getElementById('resultid').textContent = 'Your result is: ' + message;
+    });
+});

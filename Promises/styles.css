@@ -3,7 +3,7 @@
 
 .practice-list {
  list-style: none;
- display: ;
+ 
  padding: 20px;
  border: 20px;
  border-color: blue;
@@ -25,3 +25,14 @@
 
     position: static;
 }
+
+
+.prom2 {
+border-style: solid;
+border-color: black;
+width: 350px;
+height: 250px;
+padding: 10px;
+}
+
+

@@ -22,4 +22,13 @@ console.log(testPromise);
 // 2. Fulfilled
 // 3. Rejected
 
-// continue at 42:00
+
+
+
+fetch("https://jsonplaceholder.typicode.com/users")
+.then((res)=> res.json()) // decode the json source (from online mostly) to a normal json data
+.then((data)=>console.log(data)) // execute the data - display usually
+.catch((error)=> console.log(error)) // if data is not gathered
+.finally((console.log('ADS here'))) // action whether successful of not 
+
+// continue at 1:12

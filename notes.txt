@@ -1,0 +1,9 @@
+ REST API
+
+ REST - Representational State Transfer
+ State - the data
+ Representational - Data format - (JSON, HTML, XML, etc. ) 
+ Transfer - Carrying of data between consumer (aka client) and provide (aka server) using HTTP protocol
+
+ continue at 1:10
+ 

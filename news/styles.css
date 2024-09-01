@@ -34,3 +34,8 @@ text-align: center;
 .loadMoreBtncss {
     background-color: blueviolet;
 }
+
+
+button.hidden {
+    display: none;
+}

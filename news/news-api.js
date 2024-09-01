@@ -1,8 +1,8 @@
 const BASE_URL = "https://newsapi.org/v2/everything";
 const API_KEY = "75bee3a37c9e4fe5b9a56aca9eda806e";
 
-export function getNews(newsQ, resultPage) {
-    const url = `${BASE_URL}?q=${newsQ}&pageSize=8&page=${resultPage}`;
+export function getNews(searchInput, resultPage) {
+    const url = `${BASE_URL}?q=${searchInput}&pageSize=8&page=${resultPage}`;
 
 return fetch( url, {
 

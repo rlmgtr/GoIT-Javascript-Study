@@ -4,12 +4,12 @@ export function getBtn(selector) {
 
 
 
-export function enableBtn() {
-
+export function enableBtn(button) {
+button.disable = false
 }
 
 
-export function disableBtn() {
+export function disableBtn(button) {
 
 }
 
@@ -18,6 +18,10 @@ export function hideBtn(button) {
 }
 
 
-export function showBtn() {
+export function showBtn(button) {
+    button.classList.remove("hidden")
 
 }
+
+// https://www.youtube.com/watch?v=-BGdePsfmkg&t=2873s 
+// 1:13

@@ -9,8 +9,9 @@ return fetch( url, {
 headers: {
     "X-Api-Key": API_KEY
 }
-}).then(res => res.json()).then(data =>{
-return {data, nextPage: resultPage + 8};
+}).then(res => res.json())
+.then(data => {
+return { data, nextPage: resultPage + 8 };
 
 });
 

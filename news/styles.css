@@ -30,3 +30,7 @@ text-align: center;
     width: 300px;
     padding: 0px;
 }
+
+.loadMoreBtncss {
+    background-color: blueviolet;
+}

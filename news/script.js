@@ -18,11 +18,18 @@ fetchNews(searchInput, nextPage)
 };
 
 
-function fetchNews() {
+function fetchNews(searchInput, resultPage) {
+
+    return getNews(searchInput, resultPage).then(({data}) => {
+
+const {articles} = data
+
+articles.map(article => createMarkUp)
+
+    })
 
 
 }
-// continue at 57:00 https://www.youtube.com/watch?v=-BGdePsfmkg&t=2873s
 
 
 

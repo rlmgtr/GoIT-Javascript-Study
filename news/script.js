@@ -15,23 +15,30 @@ function processSubmit(e) {
     const searchInput = newsForm.newsInput.value.trim();
     const nextPage = resetPage();
 
-    fetchNews(searchInput, nextPage);
+    fetchNews(searchInput, nextPage).then(() => {
+        loadMoreBtn.dataset.page = nextPage + 1;
+    })
     showBtn(loadMoreBtn);
 }
 
 function fetchNews(searchInput, resultPage) {
-    return getNews(searchInput, resultPage).then(({ data }) => {
+    disableBtn(loadMoreBtn);
+    return getNews(searchInput, resultPage).then(({ data, nextPage }) => {
         const { articles } = data;
 
         if (articles.length === 0) {
             onError();
+            hideBtn(loadMoreBtn)
             return;
         }
 
         articles.forEach(article => {
             const markup = createMarkUp(article);
             updateNewsList(markup);
+            
         });
+
+        enableBtn(loadMoreBtn, nextPage);
     }).catch(error => {
         console.error('Error fetching news:', error);
         onError();
@@ -61,3 +68,16 @@ function updateNewsList(markup) {
 function onError() {
     updateNewsList("<p>No Articles Found</p>");
 }
+
+function handleLoadMore() {
+    const newsInput = newsForm.newsInput.value.trim();
+    const nextPage = parseInt(loadMoreBtn.dataset.page, 10);
+    fetchNews(newsInput, nextPage).then(() => {
+        nextPage += 1;
+        loadMoreBtn.dataset.page = nextPage;
+    })
+}
+
+
+
+loadMoreBtn.addEventListener("click", handleLoadMore);

@@ -4,13 +4,16 @@ export function getBtn(selector) {
 
 
 
-export function enableBtn(button) {
-button.disable = false
+export function enableBtn(button, nextPage) {
+button.disabled = false;
+button.textContent = "Load more"
+button.dataset.page = nextPage
 }
 
 
 export function disableBtn(button) {
-
+    button.disabled = true;
+    button.textContent = "Loading . . ."
 }
 
 export function hideBtn(button) {
@@ -23,5 +26,3 @@ export function showBtn(button) {
 
 }
 
-// https://www.youtube.com/watch?v=-BGdePsfmkg&t=2873s 
-// 1:13

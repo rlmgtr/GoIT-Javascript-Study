@@ -24,22 +24,20 @@ function fillTodoList() {
        toDos.forEach(({ toDoText, isDone, id }) => createLi( toDoText, isDone, id));
     }).catch(console.error());
     
-}
+};
+
+addToDoBtn.addEventListener("click", (e) => {
+    e.preventDefault;
+    let toDO = toDoInput.value.trim();
+    console.log(toDO);
+});
+
+
+
+
+
 
 window.addEventListener("DOMContentLoaded", fillTodoList);
 
 
 
-// https://www.youtube.com/watch?v=56BGgrVolkA&t=3894s
-// 50:
-
-
-
-
-
-
-
-
-
-// https://www.youtube.com/watch?v=56BGgrVolkA&t=3894s
-// 47:52

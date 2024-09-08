@@ -1,0 +1,6 @@
+interestingly, 
+
+when making a button, always consider if it is for: 
+
+a. just a button with ("click", (e)) in script
+b.  or type = submit etc , these differences will create different actions. Submit obviously submits it to the server. if you do not want that, do (a.)

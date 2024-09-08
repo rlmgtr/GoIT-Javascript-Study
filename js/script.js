@@ -22,14 +22,21 @@ if(isDone) li.classname = "checked"; // write a css for this
 function fillTodoList() {
     getToDos().then((toDos) => {
        toDos.forEach(({ toDoText, isDone, id }) => createLi( toDoText, isDone, id));
-    }).catch(console.error());
+    }).then((toDos) => {
+        CurrentID = parseInt(toDos[toDos.lenght - 1].id) + 1
+    })
+    .catch(console.error());
     
 };
 
 addToDoBtn.addEventListener("click", (e) => {
     e.preventDefault;
     let toDO = toDoInput.value.trim();
-    console.log(toDO);
+    
+    if(toDo === "") { 
+        alert("Cannot add a blank entry");
+        return;
+    }
 });
 
 
@@ -39,5 +46,6 @@ addToDoBtn.addEventListener("click", (e) => {
 
 window.addEventListener("DOMContentLoaded", fillTodoList);
 
-
+// https://www.youtube.com/watch?v=56BGgrVolkA&t=3894s
+// 55
 

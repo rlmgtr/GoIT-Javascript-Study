@@ -1,27 +1,23 @@
+.myULstyle {
 
-
-
-.practice-list {
- list-style: none;
- display: ;
- padding: 20px;
- border: 20px;
- border-color: blue;
- margin:4px;
+    list-style: none;
 }
 
-.practice-item {
- font:tahoma;
- padding: 25px;
- border: 2px;
- border-style: dashed;
- border-color: black;
- margin:25px;
- 
+.toDo-item {
+    width: 600px;
+    height: 25px;
+    padding: 5px;
+    margin: 5px;
+    border-style: groove;
 }
 
+.closeBtn {
+    position: absolute;
+    right: 200px;
 
-.samplediv {
+}
 
-    position: static;
+.checked {
+    text-decoration: line-through;
+    color: green;
 }

@@ -7,10 +7,32 @@ export const getToDos = () => {
 };
 
 // add a to do 
-export const addToDo = () => {};
+export const addToDo = (todo) => {
+    
+    fetch(BASE_URL, {
+    method: "POST",
+        headers: { 
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(todo), // should give "{'todoText': 'eat'}"
+    });
+};
 
 // delete a to do 
-export const deleteToDo = () => {};
+export const deleteToDo = (id) => {
+    return fetch(`${BASE_URL}/${id}`, {
+    method: "DELETE",}); 
+   
+};
 
 // update a to do
-export const updateToDo = () => {};
+export const updateToDo = (id, status) => {
+    fetch(`${BASE_URL}/${id}`, {
+method: "PUT",
+headers: {
+    "Content-Type": "application/json"
+},
+body: JSON.stringify({ isDone: !status }), 
+
+    });
+};
